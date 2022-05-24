@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "191625428733",
+    "firebase_url": "https://qrcodetest2-d5836-default-rtdb.firebaseio.com",
+    "project_id": "qrcodetest2-d5836",
+    "storage_bucket": "qrcodetest2-d5836.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:191625428733:android:cc47cc2296aea677124894",
+        "android_client_info": {
+          "package_name": "com.example.loginacessapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "191625428733-qkkeo6lo972dqbi73mmk3ep1fmjpr5lm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3qJMXS1JxMk4ICRdPTy9X2RLxdXZCtL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "191625428733-qkkeo6lo972dqbi73mmk3ep1fmjpr5lm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:191625428733:android:a33123624965be70124894",
+        "android_client_info": {
+          "package_name": "com.example.qrcodetest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "191625428733-qkkeo6lo972dqbi73mmk3ep1fmjpr5lm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3qJMXS1JxMk4ICRdPTy9X2RLxdXZCtL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "191625428733-qkkeo6lo972dqbi73mmk3ep1fmjpr5lm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:191625428733:android:893f85d70de655bf124894",
+        "android_client_info": {
+          "package_name": "com.example.qrcodetest2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "191625428733-qkkeo6lo972dqbi73mmk3ep1fmjpr5lm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3qJMXS1JxMk4ICRdPTy9X2RLxdXZCtL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "191625428733-qkkeo6lo972dqbi73mmk3ep1fmjpr5lm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

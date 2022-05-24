@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg"
+ >
+
+    <TextView
+        android:id="@+id/signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="140dp"
+        android:gravity="center"
+        android:text="Sign in"
+        android:textColor="@color/g"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/item"
+        android:drawableLeft="@drawable/ic_baseline_person_pin_24"
+        android:drawablePadding="20dp"
+        android:hint="Username"
+        android:inputType="textWebEmailAddress"
+        android:padding="10dp"
+        android:textColor="@color/g"
+        android:textColorHint="@color/g"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/password"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/item"
+        android:drawableLeft="@drawable/ic_baseline_security_24"
+        android:drawablePadding="20dp"
+        android:hint="Password"
+        android:padding="10dp"
+        android:textColor="@color/g"
+        android:textColorHint="@color/g"
+        android:textSize="18sp"
+        android:textStyle="normal" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:height="45dp"
+        android:background="@drawable/loginbac"
+        android:gravity="center"
+
+
+        android:text="LOGIN!"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/y"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+    <!--
+       <TextView
+           android:id="@+id/forgotpass"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/loginbtn"
+           android:layout_centerHorizontal="true"
+           android:layout_marginStart="45dp"
+
+
+           android:layout_marginTop="15dp"
+           android:layout_marginEnd="45dp"
+           android:layout_marginBottom="45dp"
+
+           android:background="@drawable/item2"
+
+           android:text="FORGOT YOUR PASSWORD?"
+           android:textColor="@color/g"
+           android:textSize="15dp"
+           android:textStyle="bold" />
+
+      <TextView
+         android:id="@+id/registerlink"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/loginbtn"
+         android:layout_centerHorizontal="true"
+         android:layout_marginStart="45dp"
+   android:gravity="center"
+         android:layout_marginTop="55dp"
+         android:layout_marginEnd="45dp"
+         android:layout_marginBottom="45dp"
+
+         android:background="@drawable/item2"
+
+         android:text="Don't have an account yet? "
+         android:textColor="@color/g"
+         android:textSize="15dp"
+         android:textStyle="bold" />
+
+    <TextView
+         android:id="@+id/signupage"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/loginbtn"
+
+         android:layout_alignRight="@id/registerlink"
+
+         android:layout_marginTop="54dp"
+
+         android:layout_marginRight="-54dp"
+
+         android:layout_marginBottom="0dp"
+
+         android:background="@drawable/item2"
+         android:text="Sign up "
+         android:textColor="@color/g"
+         android:textSize="15dp"
+         android:textStyle="bold" />
+
+         -->
+
+    <Switch
+        android:id="@+id/active"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="end"
+        android:text="Remember me"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/cus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:text="Contact Us"
+        android:textColor="@color/g"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/item3"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="15dp"
+            android:onClick="fbClick"
+            android:src="@drawable/fb2" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="15dp"
+            android:onClick="instaClick"
+            android:src="@drawable/insta2" />
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_margin="15dp"
+            android:onClick="linkedinClick"
+            android:src="@drawable/lin" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="60dp"
+        android:gravity="left">
+
+        <ImageView
+            android:layout_width="70dp"
+
+            android:layout_height="70dp"
+
+            android:layout_marginTop="70dp"
+            android:background="@drawable/circle"
+            android:src="@drawable/robot" />
+    </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+
+      android:gravity="right"
+      android:layout_marginTop="120dp"
+      android:layout_marginRight="50dp">
+
+      <ImageView
+          android:layout_width="70dp"
+          android:layout_margin="10dp"
+          android:layout_height="70dp"
+          android:src="@drawable/robot2"
+          android:background="@drawable/circle"
+          />
+  </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/circle"
+        android:src="@drawable/lo" />
+
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="95dp"
+
+        android:layout_marginBottom="19dp"
+        android:src="@drawable/robot5" />
+
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="70dp"
+
+        android:layout_below="@id/login"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginRight="220dp"
+
+        android:layout_marginBottom="19dp"
+        android:src="@drawable/line"
+
+        />
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="70dp"
+
+        android:layout_below="@id/login"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="19dp"
+        android:src="@drawable/line"
+
+        />
+
+
+</RelativeLayout>

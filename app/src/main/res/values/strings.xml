@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">RobocApp</string>
+    //homolagation
+    <string name="title_junior">Junior</string>
+    <string name="title_suiveur">Suiveur</string>
+    <string name="title_autonome">Autonome</string>
+    <string name="title_input">Input</string>
+    <string name="title_tout_terrain">Tout Terrain</string>
+    <string name="page_junior">Page de la maquette Junior</string>
+    <string name="page_suiveur">Page de la maquette Suiveur</string>
+    <string name="page_autonome">Page de la maquette Autonome</string>
+    <string name="page_tout_terrain">Page de la maquette Tout Terrain</string>
+    <string name="liste">Les robots homologués :</string>
+    <string name="scan">Scan QR code</string>
+    <string name="text_respect">Respect des dimensions \n de la cahier de charge :</string>
+    <string name="design">Note sur le design (10 pts) :</string>
+    <string name="meca">Note sur la conception\nmécanique (5 pts) :</string>
+    <string name="elec">Note sur la conception\nélectrique (5 pts) :</string>
+    <string name="hint">0</string>
+    <string name="totale">Note totale (score) :</string>
+    <string name="text_score">SCORE</string>
+    <string name="setscore">Enregistrer le score</string>
+    //============
+    <string name="team_name">Team_name</string>
+    <string name="checkbox1">task1</string>
+    <string name="checkbox2">task2</string>
+    <string name="checkbox3">task3</string>
+    <string name="checkbox4">task4</string>
+    <string name="checkbox5">task5</string>
+    <string name="checkbox6">task6</string>
+    <string name="checkbox7">task7</string>
+    <string name="checkbox8">task8</string>
+    <string name="checkbox9">task9</string>
+    <string name="checkbox10">task10</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="spinner_array">
+        <item>junior</item>
+        <item>suiveur</item>
+        <item>autonome</item>
+        <item>toutterrain</item>
+    </string-array>
+    <string-array name="spinner_user_array">
+        <item>réception</item>
+        <item>homologation</item>
+        <item>jury</item>
+        <item>admin</item>
+    </string-array>
+
+</resources>
