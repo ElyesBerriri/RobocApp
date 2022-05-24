@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.loginacessapp">
+    package="com.example.robocapp">
     <!-- qr code -->
     <uses-permission android:name="android.permission.CAMERA" />
 
@@ -10,39 +10,39 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.LoginAcessApp">
+        android:theme="@style/Theme.RobocApp">
         <activity
-            android:name=".qrscanner1"
+            android:name="com.example.robocapp.qrscanner1"
             android:exported="false" />
         <activity
-            android:name=".QRScanRec"
+            android:name="com.example.robocapp.QRScanRec"
             android:exported="false" />
         <activity
-            android:name=".jurynavbar"
+            android:name="com.example.robocapp.jurynavbar"
             android:exported="false" />
         <activity
-            android:name=".addTeam"
+            android:name="com.example.robocapp.addTeam"
             android:exported="false" />
         <activity
-            android:name=".addUser"
+            android:name="com.example.robocapp.addUser"
             android:exported="false" />
         <activity
-            android:name=".juryActivity"
+            android:name="com.example.robocapp.juryActivity"
             android:exported="false" />
         <activity
-            android:name=".recActivity"
+            android:name="com.example.robocapp.recActivity"
             android:exported="false"/>
         <activity
-            android:name=".recnavbar"
+            android:name="com.example.robocapp.recnavbar"
             android:exported="false" />
         <activity
-            android:name=".UserActivity"
+            android:name="com.example.robocapp.UserActivity"
             android:exported="false" />
         <activity
-            android:name=".AdminActivity"
+            android:name="com.example.robocapp.AdminActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.robocapp.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,25 +51,25 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".homologation.JuniorActivity"
+            android:name="com.example.robocapp.homologation.JuniorActivity"
             android:exported="false" />
         <activity
-            android:name=".homologation.AcceuilActivity"
+            android:name="com.example.robocapp.homologation.AcceuilActivity"
             android:exported="false" />
         <activity
-            android:name=".homologation.AutonomeActivity"
+            android:name="com.example.robocapp.homologation.AutonomeActivity"
             android:exported="false" />
         <activity
-            android:name=".homologation.InputActivity"
+            android:name="com.example.robocapp.homologation.InputActivity"
             android:exported="false" />
         <activity
-            android:name=".homologation.SuiveurActivity"
+            android:name="com.example.robocapp.homologation.SuiveurActivity"
             android:exported="false" />
         <activity
-            android:name=".homologation.ToutTerrainActivity"
+            android:name="com.example.robocapp.homologation.ToutTerrainActivity"
             android:exported="false" />
         <activity
-            android:name=".QRScanner"
+            android:name="com.example.robocapp.QRScanner"
             android:exported="false" />
     </application>
 
