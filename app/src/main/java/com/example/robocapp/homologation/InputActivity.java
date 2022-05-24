@@ -10,7 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.robocapp.QRScanner;
+
 import com.example.robocapp.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -26,7 +26,7 @@ public class InputActivity extends AppCompatActivity {
         setContentView(R.layout.activity_input);
 
         Intent intent = getIntent();
-        String data = intent.getStringExtra(QRScanner.DATA);
+        String data = intent.getStringExtra(QRScannerHomologation.DATA);
         Button btn = findViewById(R.id.btnscore);
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -44,7 +44,7 @@ public class InputActivity extends AppCompatActivity {
                     }).addOnFailureListener(er-> {
                         Toast.makeText(InputActivity.this, ""+er.getMessage(), Toast.LENGTH_SHORT).show();
                     });
-                    startActivity(new Intent(InputActivity.this,AcceuilActivity.class));
+                    startActivity(new Intent(InputActivity.this, NavbarHomologation.class));
 /*
                     db.addValueEventListener(new ValueEventListener() {
                         @Override

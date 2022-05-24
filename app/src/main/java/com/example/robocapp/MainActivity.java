@@ -13,7 +13,9 @@ import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.Toast;
 
-import com.example.robocapp.homologation.AcceuilActivity;
+import com.example.robocapp.homologation.NavbarHomologation;
+import com.example.robocapp.jury.NavbarJury;
+import com.example.robocapp.reception.NavbarReception;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -51,40 +53,40 @@ public class MainActivity extends AppCompatActivity {
                             if (dataSnapshot.child(input1).child("password").getValue(String.class).equals(input2)) {
                                 if (active.isChecked()) {
                                     if (dataSnapshot.child(input1).child("as").getValue(String.class).equals("admin")) {
-                                        preferences.setDataLogin(MainActivity.this, true);
-                                        preferences.setDataAs(MainActivity.this, "admin");
+                                        Preferences.setDataLogin(MainActivity.this, true);
+                                        Preferences.setDataAs(MainActivity.this, "admin");
                                         startActivity(new Intent(MainActivity.this, AdminActivity.class));
                                     } else if (dataSnapshot.child(input1).child("as").getValue(String.class).equals("réception")){
-                                        preferences.setDataLogin(MainActivity.this, true);
-                                        preferences.setDataAs(MainActivity.this, "réception");
-                                        startActivity(new Intent(MainActivity.this, recnavbar.class));
+                                        Preferences.setDataLogin(MainActivity.this, true);
+                                        Preferences.setDataAs(MainActivity.this, "réception");
+                                        startActivity(new Intent(MainActivity.this, NavbarReception.class));
                                     }
                                     else if (dataSnapshot.child(input1).child("as").getValue(String.class).equals("jury")){
-                                        preferences.setDataLogin(MainActivity.this, true);
-                                        preferences.setDataAs(MainActivity.this, "jury");
-                                        startActivity(new Intent(MainActivity.this, jurynavbar.class));
+                                        Preferences.setDataLogin(MainActivity.this, true);
+                                        Preferences.setDataAs(MainActivity.this, "jury");
+                                        startActivity(new Intent(MainActivity.this, NavbarJury.class));
                                     }
                                     else if (dataSnapshot.child(input1).child("as").getValue(String.class).equals("homologation")){
-                                        preferences.setDataLogin(MainActivity.this, true);
-                                        preferences.setDataAs(MainActivity.this, "homologation");
-                                        startActivity(new Intent(MainActivity.this, AcceuilActivity.class));
+                                        Preferences.setDataLogin(MainActivity.this, true);
+                                        Preferences.setDataAs(MainActivity.this, "homologation");
+                                        startActivity(new Intent(MainActivity.this, NavbarHomologation.class));
                                     }
                                 } else {
                                     if (dataSnapshot.child(input1).child("as").getValue(String.class).equals("admin")) {
-                                        preferences.setDataLogin(MainActivity.this, false);
+                                        Preferences.setDataLogin(MainActivity.this, false);
                                         startActivity(new Intent(MainActivity.this, AdminActivity.class));
 
                                     } else if (dataSnapshot.child(input1).child("as").getValue(String.class).equals("réception")){
-                                        preferences.setDataLogin(MainActivity.this, false);
-                                        startActivity(new Intent(MainActivity.this, recnavbar.class));
+                                        Preferences.setDataLogin(MainActivity.this, false);
+                                        startActivity(new Intent(MainActivity.this, NavbarReception.class));
                                     }
                                     else if (dataSnapshot.child(input1).child("as").getValue(String.class).equals("jury")){
-                                        preferences.setDataLogin(MainActivity.this, false);
-                                        startActivity(new Intent(MainActivity.this, jurynavbar.class));
+                                        Preferences.setDataLogin(MainActivity.this, false);
+                                        startActivity(new Intent(MainActivity.this, NavbarJury.class));
                                     }
                                     else if (dataSnapshot.child(input1).child("as").getValue(String.class).equals("homologation")){
-                                        preferences.setDataLogin(MainActivity.this, false);
-                                        startActivity(new Intent(MainActivity.this, AcceuilActivity.class));
+                                        Preferences.setDataLogin(MainActivity.this, false);
+                                        startActivity(new Intent(MainActivity.this, NavbarHomologation.class));
                                     }
                                 }
                             } else {
@@ -104,19 +106,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        if (preferences.getDataLogin(this)) {
-            if (preferences.getDataAs(this).equals("admin")) {
-                startActivity(new Intent(this, AdminActivity.class));
-                finish();
-            } else {
-                startActivity(new Intent(this, UserActivity.class));
-                finish();
-            }
-        }
-    }
 
     public void fbClick(View view) {
         startActivity(getOpenFacebookIntent());
