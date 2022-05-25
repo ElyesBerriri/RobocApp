@@ -14,17 +14,14 @@ public class AdminActivity extends AppCompatActivity {
     }
 
     public void addUser(View view) {
-        Intent intent = new Intent(this, AddUser.class);
-        startActivity(intent);
+        startActivity(new Intent(this, AddUser.class));
     }
 
     public void addTeam(View view) {
-        Intent intent = new Intent(this, AddTeam.class);
-        startActivity(intent);
+        startActivity(new Intent(this, AddTeam.class));
     }
 
     public void disconnect(View view){
-        Intent intent = new Intent(this,MainActivity.class);
-        startActivity(intent);
+        startActivity(new Intent(this,MainActivity.class));
     }
 }

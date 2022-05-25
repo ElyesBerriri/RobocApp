@@ -18,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class AddUser extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    private ProgressBar progressBar;
+    //private ProgressBar progressBar;
     private DatabaseReference reference;
     Spinner spinner;
 
@@ -26,7 +26,7 @@ public class AddUser extends AppCompatActivity implements AdapterView.OnItemSele
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_user);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        //progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         spinner = (Spinner) findViewById(R.id.spinner_user);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -56,12 +56,12 @@ public class AddUser extends AppCompatActivity implements AdapterView.OnItemSele
 
                 if (task.isSuccessful()){
                     Toast.makeText(AddUser.this,"User has been registered successfully!",Toast.LENGTH_LONG).show();
-                    progressBar.setVisibility(View.GONE);
+                    //progressBar.setVisibility(View.GONE);
                     //redirect to adminActivity
                     startActivity(new Intent(AddUser.this, AdminActivity.class));
                 }else{
                     Toast.makeText(AddUser.this,"Failed to register! Try again!",Toast.LENGTH_LONG).show();
-                    progressBar.setVisibility(View.GONE);
+                    //progressBar.setVisibility(View.GONE);
                 }
             }
         });

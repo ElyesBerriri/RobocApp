@@ -18,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class AddTeam extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    private ProgressBar progressBar;
+    //private ProgressBar progressBar;
     private DatabaseReference reference;
     Spinner spinner;
 
@@ -26,7 +26,7 @@ public class AddTeam extends AppCompatActivity implements AdapterView.OnItemSele
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_team);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        //progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         spinner = (Spinner) findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -56,18 +56,18 @@ public class AddTeam extends AppCompatActivity implements AdapterView.OnItemSele
         Team team = new Team(teamid,teamname,chef,spinner.getSelectedItem().toString(),numtel);
         System.out.println(team);
 
-        reference.child(teamid.toString()).setValue(team).addOnCompleteListener(new OnCompleteListener<Void>() {
+        reference.child(teamid).setValue(team).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
 
                 if (task.isSuccessful()){
                     Toast.makeText(AddTeam.this,"User has been registered successfully!",Toast.LENGTH_LONG).show();
-                    progressBar.setVisibility(View.GONE);
+                    //progressBar.setVisibility(View.GONE);
                     //redirect to adminActivity
                     startActivity(new Intent(AddTeam.this, AdminActivity.class));
                 }else{
                     Toast.makeText(AddTeam.this,"Failed to register! Try again!",Toast.LENGTH_LONG).show();
-                    progressBar.setVisibility(View.GONE);
+                    //progressBar.setVisibility(View.GONE);
                 }
             }
         });

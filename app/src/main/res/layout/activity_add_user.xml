@@ -113,19 +113,17 @@
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="50dp"
             android:background="@drawable/loginbac"
-            android:clickable="true"
             android:onClick="addTeam"
             android:text="Enregistrer"
-
             android:textColor="@color/white" />
 
     </LinearLayout>
-
+<!--
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:visibility="gone" />
-
+-->
 </RelativeLayout>

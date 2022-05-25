@@ -2,7 +2,6 @@ package com.example.robocapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
@@ -12,7 +11,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.Toast;
-
 import com.example.robocapp.homologation.NavbarHomologation;
 import com.example.robocapp.jury.NavbarJury;
 import com.example.robocapp.reception.NavbarReception;
@@ -22,12 +20,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Objects;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText username,password;
-    private Button login;
-
-    Switch active;
+    //private Switch active;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,22 +34,32 @@ public class MainActivity extends AppCompatActivity {
 
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
-        login = findViewById(R.id.login);
-        active = findViewById(R.id.active);
+        //active = findViewById(R.id.active);
 
-        login.setOnClickListener(new View.OnClickListener() {
+    }
+
+
+    public void loginClick(View v) {
+        System.out.println("111111111111111111111111111111111111111111111");/*
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("login");
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            String input1;
+            String input2;
+
             @Override
-            public void onClick(View v) {
-                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
-                databaseReference.child("login").addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        String input1 = username.getText().toString();
-                        String input2 = password.getText().toString();
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(!username.getText().toString().trim().equals(""))
+                    input1 = username.getText().toString().trim();
+                else
+                    input1 = "none";
+                if(!password.getText().toString().trim().equals(""))
+                    input2 = password.getText().toString().trim();
+                else
+                    input2 = "none";
 
-                        if (dataSnapshot.child(input1).exists()) {
-                            if (dataSnapshot.child(input1).child("password").getValue(String.class).equals(input2)) {
-                                if (active.isChecked()) {
+                if (dataSnapshot.child(input1).exists()) {
+                    if (Objects.requireNonNull(dataSnapshot.child(input1).child("password").getValue()).toString().equals(input2)) {
+                                /*if (active.isChecked()) {
                                     if (dataSnapshot.child(input1).child("as").getValue(String.class).equals("admin")) {
                                         Preferences.setDataLogin(MainActivity.this, true);
                                         Preferences.setDataAs(MainActivity.this, "admin");
@@ -72,40 +80,40 @@ public class MainActivity extends AppCompatActivity {
                                         startActivity(new Intent(MainActivity.this, NavbarHomologation.class));
                                     }
                                 } else {
-                                    if (dataSnapshot.child(input1).child("as").getValue(String.class).equals("admin")) {
-                                        Preferences.setDataLogin(MainActivity.this, false);
-                                        startActivity(new Intent(MainActivity.this, AdminActivity.class));
+                        System.out.println("2222222222222222222222222222222222");
+                        switch (Objects.requireNonNull(dataSnapshot.child(input1).child("as").getValue(String.class))) {
+                            case "admin":
+                                //Preferences.setDataLogin(MainActivity.this, false);
+                                startActivity(new Intent(MainActivity.this, AdminActivity.class));
 
-                                    } else if (dataSnapshot.child(input1).child("as").getValue(String.class).equals("réception")){
-                                        Preferences.setDataLogin(MainActivity.this, false);
-                                        startActivity(new Intent(MainActivity.this, NavbarReception.class));
-                                    }
-                                    else if (dataSnapshot.child(input1).child("as").getValue(String.class).equals("jury")){
-                                        Preferences.setDataLogin(MainActivity.this, false);
-                                        startActivity(new Intent(MainActivity.this, NavbarJury.class));
-                                    }
-                                    else if (dataSnapshot.child(input1).child("as").getValue(String.class).equals("homologation")){
-                                        Preferences.setDataLogin(MainActivity.this, false);
-                                        startActivity(new Intent(MainActivity.this, NavbarHomologation.class));
-                                    }
-                                }
-                            } else {
-                                Toast.makeText(MainActivity.this, "Password incorrect!", Toast.LENGTH_SHORT).show();
-                            }
-                        } else {
-                            Toast.makeText(MainActivity.this, "Username incorrect!", Toast.LENGTH_SHORT).show();
+                                break;
+                            case "réception":
+                                //Preferences.setDataLogin(MainActivity.this, false);
+                                startActivity(new Intent(MainActivity.this, NavbarReception.class));
+                                break;
+                            case "jury":
+                                //Preferences.setDataLogin(MainActivity.this, false);
+                                startActivity(new Intent(MainActivity.this, NavbarJury.class));
+                                break;
+                            case "homologation":
+                                //Preferences.setDataLogin(MainActivity.this, false);
+                                startActivity(new Intent(MainActivity.this, NavbarHomologation.class));
+                                break;
                         }
+                    } else {
+                        Toast.makeText(MainActivity.this, "Password incorrect!", Toast.LENGTH_SHORT).show();
                     }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                });
+                } else {
+                    Toast.makeText(MainActivity.this, "Username incorrect!", Toast.LENGTH_SHORT).show();
+                }
             }
-        });
-    }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });*/
+    }
 
     public void fbClick(View view) {
         startActivity(getOpenFacebookIntent());

@@ -18,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class InputActivity extends AppCompatActivity {
 
     DatabaseReference db;
-    String maquette = "";
+    //String maquette = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
