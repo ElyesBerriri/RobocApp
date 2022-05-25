@@ -4,8 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,7 +25,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,8 +35,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_main);/*
+        resizeImage(R.drawable.lo);
+        resizeImage(R.drawable.robot);
+        resizeImage(R.drawable.robot2);*/
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         //active = findViewById(R.id.active);
@@ -40,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void loginClick(View v) {
-        System.out.println("111111111111111111111111111111111111111111111");/*
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("login");
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             String input1;
@@ -79,8 +85,7 @@ public class MainActivity extends AppCompatActivity {
                                         Preferences.setDataAs(MainActivity.this, "homologation");
                                         startActivity(new Intent(MainActivity.this, NavbarHomologation.class));
                                     }
-                                } else {
-                        System.out.println("2222222222222222222222222222222222");
+                                } else {*/
                         switch (Objects.requireNonNull(dataSnapshot.child(input1).child("as").getValue(String.class))) {
                             case "admin":
                                 //Preferences.setDataLogin(MainActivity.this, false);
@@ -112,9 +117,49 @@ public class MainActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
-        });*/
+        });
+    }
+/*
+    public Drawable resizeImage(int imageResource) {// R.drawable.large_image
+        // Get device dimensions
+        Display display = getWindowManager().getDefaultDisplay();
+        double deviceWidth = display.getWidth();
+
+        BitmapDrawable bd = (BitmapDrawable) this.getResources().getDrawable(imageResource);
+        double imageHeight = bd.getBitmap().getHeight();
+        double imageWidth = bd.getBitmap().getWidth();
+
+        double ratio = deviceWidth / imageWidth;
+        int newImageHeight = (int) (imageHeight * ratio);
+
+        Bitmap bMap = BitmapFactory.decodeResource(getResources(), imageResource);
+        Drawable drawable = new BitmapDrawable(this.getResources(),
+                getResizedBitmap(bMap, newImageHeight, (int) deviceWidth));
+
+        return drawable;
     }
 
+    public Bitmap getResizedBitmap(Bitmap bm, int newHeight, int newWidth) {
+
+        int width = bm.getWidth();
+        int height = bm.getHeight();
+
+        float scaleWidth = ((float) newWidth) / width;
+        float scaleHeight = ((float) newHeight) / height;
+
+        // create a matrix for the manipulation
+        Matrix matrix = new Matrix();
+
+        // resize the bit map
+        matrix.postScale(scaleWidth, scaleHeight);
+
+        // recreate the new Bitmap
+        Bitmap resizedBitmap = Bitmap.createBitmap(bm, 0, 0, width, height,
+                matrix, false);
+
+        return resizedBitmap;
+    }
+*/
     public void fbClick(View view) {
         startActivity(getOpenFacebookIntent());
     }

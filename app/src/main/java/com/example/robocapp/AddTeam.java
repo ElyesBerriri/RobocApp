@@ -3,7 +3,13 @@ package com.example.robocapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -27,7 +33,7 @@ public class AddTeam extends AppCompatActivity implements AdapterView.OnItemSele
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_team);
         //progressBar = (ProgressBar) findViewById(R.id.progressBar);
-
+        resizeImage(R.drawable.lo);
         spinner = (Spinner) findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.spinner_array, android.R.layout.simple_spinner_item);
@@ -79,4 +85,30 @@ public class AddTeam extends AppCompatActivity implements AdapterView.OnItemSele
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {}
     //==================
+
+
+    public Drawable resizeImage(int imageResource) {
+        Display display = getWindowManager().getDefaultDisplay();
+        double deviceWidth = display.getWidth();
+        BitmapDrawable bd = (BitmapDrawable) this.getResources().getDrawable(imageResource);
+        double imageHeight = bd.getBitmap().getHeight();
+        double imageWidth = bd.getBitmap().getWidth();
+        double ratio = deviceWidth / imageWidth;
+        int newImageHeight = (int) (imageHeight * ratio);
+        Bitmap bMap = BitmapFactory.decodeResource(getResources(), imageResource);
+        return new BitmapDrawable(this.getResources(),
+                getResizedBitmap(bMap, newImageHeight, (int) deviceWidth));
+    }
+
+    public Bitmap getResizedBitmap(Bitmap bm, int newHeight, int newWidth) {
+        int width = bm.getWidth();
+        int height = bm.getHeight();
+        float scaleWidth = ((float) newWidth) / width;
+        float scaleHeight = ((float) newHeight) / height;
+        Matrix matrix = new Matrix();
+        matrix.postScale(scaleWidth, scaleHeight);
+        return Bitmap.createBitmap(bm, 0, 0, width, height,
+                matrix, false);
+    }
+
 }

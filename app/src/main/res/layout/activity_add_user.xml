@@ -4,42 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddUser"
-    android:background="@drawable/bg">
+    tools:context=".AddUser">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:orientation="vertical">
-        <ImageView
-            android:id="@+id/logo1"
-            android:layout_width="190dp"
-            android:layout_height="190dp"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="9dp"
-            android:background="@drawable/circle"
-            android:src="@drawable/lo" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:background="@drawable/item4"
+            android:padding="10dp"
             android:text="Ajouter un utilisateur"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="30sp"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"/>
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:background="@drawable/item2"
             android:orientation="horizontal">
 
             <TextView
@@ -47,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:text="Username :"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="23sp" />
 
             <EditText
                 android:id="@+id/EtNom"
@@ -64,15 +53,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:orientation="horizontal"
-            android:background="@drawable/item2">
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Password :"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="23sp" />
 
             <EditText
                 android:id="@+id/EtPass"

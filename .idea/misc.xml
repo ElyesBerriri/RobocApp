@@ -122,20 +122,29 @@
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/fragment_autonomerec.xml" value="0.1796875" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/fragment_junior.xml" value="0.1796875" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/fragment_suiveur2.xml" value="0.1796875" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/item_homologation.xml" value="0.14749893116716545" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/item_jury.xml" value="0.14749893116716545" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/item_of_list.xml" value="0.1796875" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/item_reception.xml" value="0.14749893116716545" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/junior_homologation.xml" value="0.1796875" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/junior_jury.xml" value="0.14749893116716545" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/junior_reception.xml" value="0.1796875" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/jury.xml" value="0.1796875" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/jury_item.xml" value="0.1796875" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/jury_suiveur.xml" value="0.1796875" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/jury_tout_terrain.xml" value="0.1796875" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/navbar_homologation.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/navbar_jury.xml" value="0.14749893116716545" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/navbar_reception.xml" value="0.14749893116716545" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/rec.xml" value="0.1796875" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/rec_item.xml" value="0.1796875" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/reception_junior.xml" value="0.1796875" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/suiveur_homologation.xml" value="0.1796875" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/suiveur_jury.xml" value="0.14749893116716545" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/suiveur_reception.xml" value="0.1796875" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/tout_terrain_homologation.xml" value="0.1796875" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/tout_terrain_jury.xml" value="0.14749893116716545" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/tout_terrain_reception.xml" value="0.14749893116716545" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/menu/imenu.xml" value="0.1796875" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/menu/imenu1.xml" value="0.14749893116716545" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.188" />

@@ -5,31 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".jury.JuryActivity"
-    android:background="@drawable/bg">
-
+    tools:context=".jury.JuryActivity">
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:orientation="vertical"
         android:layout_gravity="center">
-        <ImageView
-            android:id="@+id/logo1"
-            android:layout_width="190dp"
-            android:layout_height="190dp"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="9dp"
-            android:background="@drawable/circle"
-            android:src="@drawable/lo" />
+
+        <TextView
+            android:id="@+id/title_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item2"
+            android:padding="20dp"
+            android:text="Jury"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Team id"
+            android:layout_marginHorizontal="50dp"
+            android:text="Team id :"
             android:textColor="@color/g"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:textStyle="bold"
             android:layout_marginTop="60dp"/>
 
@@ -37,12 +37,14 @@
             android:id="@+id/team_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginBottom="20dp"
             android:text="ID"
             android:textStyle="italic"
             android:fontFamily="sans-serif-medium"
             android:padding="2dp"
             android:textColor="@color/black"
-            android:textSize="20dp"
+            android:textSize="25sp"
             android:background="@drawable/item2"/>
 
 
