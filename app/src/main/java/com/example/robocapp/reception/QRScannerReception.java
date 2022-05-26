@@ -8,6 +8,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.robocapp.homologation.InputActivity;
+import com.example.robocapp.homologation.NavbarHomologation;
+import com.example.robocapp.homologation.QRScannerHomologation;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -52,19 +55,26 @@ public class QRScannerReception extends AppCompatActivity implements ZXingScanne
 
     @Override
     public void handleResult(Result rawResult) {
-        String data = rawResult.getText().toString();
+        String data = rawResult.getText().trim();
 
-        teamsRef.child(data).addValueEventListener(new ValueEventListener() {
+        teamsRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String ch = dataSnapshot.child("concours").getValue().toString();
-                teamsRef.child(data).child("pres").setValue(true).addOnSuccessListener(suc-> // set to add or update
-                {
-                    Toast.makeText(QRScannerReception.this, "Le Robot ** "+data+" ** est bien ajouté", Toast.LENGTH_SHORT).show();
-                }).addOnFailureListener(er-> {
-                    Toast.makeText(QRScannerReception.this, ""+er.getMessage(), Toast.LENGTH_SHORT).show();
-                });
-                startActivity(new Intent(QRScannerReception.this, NavbarReception.class));
+                if (dataSnapshot.child(data).exists()) {
+                    teamsRef.child(data).child("pres").setValue(true).addOnSuccessListener(suc -> // set to add or update
+                    {
+                        Toast.makeText(QRScannerReception.this, "Le Robot ** " + data + " ** est bien ajouté", Toast.LENGTH_SHORT).show();
+                    }).addOnFailureListener(er -> {
+                        Toast.makeText(QRScannerReception.this, "" + er.getMessage(), Toast.LENGTH_SHORT).show();
+                    });
+                    startActivity(new Intent(QRScannerReception.this, NavbarReception.class));
+                }
+                else{
+                    Toast.makeText(QRScannerReception.this, "There is no registred robot who has the name : "+data+" !!!", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(QRScannerReception.this, NavbarReception.class);
+                    startActivity(intent);
+                    onBackPressed();
+                }
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
