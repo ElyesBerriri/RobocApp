@@ -18,11 +18,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:padding="10dp"
             android:background="@drawable/corner2"
             android:text="ADMIN PAGE"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="40sp"
+            android:textSize="30sp"
             android:textStyle="bold">
 
         </TextView>
@@ -33,10 +34,10 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="70dp"
-            android:background="@drawable/loginbac"
+            android:paddingVertical="20dp"
             android:onClick="addUser"
             android:text="Ajouter Un Utilisateur"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"/>
 
         <Button
             android:id="@+id/addTeam"
@@ -44,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="40dp"
-            android:background="@drawable/loginbac"
+            android:paddingVertical="20dp"
             android:onClick="addTeam"
             android:text="Ajouter Une Equipe"
             android:textColor="@color/white" />
@@ -55,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="40dp"
-            android:background="@drawable/loginbac"
+            android:paddingVertical="20dp"
             android:onClick="disconnect"
             android:text="Se déconnecter"
             android:textColor="@color/white" />

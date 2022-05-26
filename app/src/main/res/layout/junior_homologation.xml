@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey"
     tools:context=".homologation.JuniorHomologation">
 
     <!-- TODO: Update blank fragment layout -->
@@ -37,7 +36,6 @@
                 android:id="@+id/btnscan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/loginbac"
                 android:paddingHorizontal="30dp"
                 android:paddingVertical="10dp"
                 android:text="@string/scan"
@@ -49,7 +47,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="20dp"
-                android:background="@drawable/loginbac"
                 android:clickable="true"
                 android:onClick="disconnect"
                 android:paddingHorizontal="12dp"

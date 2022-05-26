@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/are_logo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
         android:background="@drawable/circle"
@@ -24,10 +24,11 @@
         android:layout_centerInParent="true">
 
         <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:background="@drawable/circle"
-            android:src="@drawable/robot_left" />
+            android:src="@drawable/robot_left"
+            android:padding="10dp"/>
 
         <TextView
             android:id="@+id/signin"
@@ -41,10 +42,11 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:background="@drawable/circle"
-            android:src="@drawable/robot_right" />
+            android:src="@drawable/robot_right"
+            android:padding="12dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -92,7 +94,6 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="40dp"
-            android:background="@drawable/loginbac"
             android:text="LOGIN!"
             android:textColor="@color/white"
             android:textColorHighlight="@color/darkYellow"
@@ -177,40 +178,48 @@
 
             -->
 
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="70dp"
+        android:layout_above="@+id/contact_us"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/robot_contact_us" />
+
+    <LinearLayout
+        android:id="@+id/contact_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/foot"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
         <ImageView
-            android:layout_width="65dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="70dp"
-            android:src="@drawable/robot_contact_us" />
-        <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="125dp"
+            android:layout_height="20dp"
+            android:scaleX="5"
+            android:scaleY="2"
+            android:src="@drawable/line" />
+
+        <TextView
+            android:id="@+id/cus"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_gravity="center_vertical"
+            android:text="Contact Us"
+            android:textColor="@color/g"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
-            <ImageView
-                android:layout_width="125dp"
-                android:layout_height="70dp"
-                android:src="@drawable/line" />
-
-            <TextView
-                android:id="@+id/cus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="Contact Us"
-                android:textColor="@color/g"
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
-
-            <ImageView
-                android:layout_width="125dp"
-                android:layout_height="70dp"
-                android:src="@drawable/line" />
-
-        </LinearLayout>
-
+        <ImageView
+            android:layout_width="125dp"
+            android:layout_height="20dp"
+            android:src="@drawable/line"
+            android:scaleX="5"
+            android:scaleY="2"/>
     </LinearLayout>
 
     <LinearLayout
@@ -218,8 +227,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@drawable/corner3"
-        android:gravity="center">
-
+        android:gravity="center"
+        android:id="@+id/foot">
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"

@@ -99,6 +99,7 @@
         <entry key="..\:/Users/ilyes/AndroidStudioProjects/LoginApp/app/src/main/res/menu/imenu1.xml" value="0.1796875" />
         <entry key="..\:/Users/ilyes/AndroidStudioProjects/LoginApp/app/src/main/res/menu/imenu3.xml" value="0.1796875" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/autonome_icon.xml" value="0.165" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/bouton.xml" value="0.165" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/btn_scan.xml" value="0.165" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/button_login.xml" value="0.165" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/circle.xml" value="0.165" />
@@ -126,7 +127,7 @@
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/activity_acceuil.xml" value="0.1796875" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/activity_add_team.xml" value="0.1796875" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/activity_add_user.xml" value="0.1796875" />
-        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/activity_admin.xml" value="0.1796875" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/activity_admin.xml" value="0.14749893116716545" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/activity_autonome.xml" value="0.1796875" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/activity_input.xml" value="0.1796875" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/activity_junior.xml" value="0.1796875" />
