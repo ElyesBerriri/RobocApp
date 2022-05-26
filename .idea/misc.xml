@@ -98,9 +98,26 @@
         <entry key="..\:/Users/ilyes/AndroidStudioProjects/LoginApp/app/src/main/res/menu/imenu.xml" value="0.1796875" />
         <entry key="..\:/Users/ilyes/AndroidStudioProjects/LoginApp/app/src/main/res/menu/imenu1.xml" value="0.1796875" />
         <entry key="..\:/Users/ilyes/AndroidStudioProjects/LoginApp/app/src/main/res/menu/imenu3.xml" value="0.1796875" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/autonome_icon.xml" value="0.165" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/btn_scan.xml" value="0.165" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/button_login.xml" value="0.165" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/circle.xml" value="0.165" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/corner.xml" value="0.165" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.165" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/ic_baseline_person_pin_24.xml" value="0.165" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/ic_baseline_security_24.xml" value="0.165" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.165" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/item.xml" value="0.188" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/item2.xml" value="0.188" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/item3.xml" value="0.188" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/item4.xml" value="0.165" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/item5.xml" value="0.165" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/loginbac.xml" value="0.165" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/pau.xml" value="0.165" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/pjr.xml" value="0.165" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/psr.xml" value="0.165" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/selector.xml" value="0.165" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/drawable/tt.xml" value="0.165" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/activity_acceuil.xml" value="0.1796875" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/activity_add_team.xml" value="0.1796875" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/activity_add_user.xml" value="0.1796875" />
@@ -147,6 +164,7 @@
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/layout/tout_terrain_reception.xml" value="0.14749893116716545" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/menu/imenu.xml" value="0.1796875" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/menu/imenu1.xml" value="0.14749893116716545" />
+        <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.165" />
         <entry key="..\:/Users/ilyes/OneDrive/Bureau/Work/Android Studio/RobocApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.188" />
       </map>
     </option>

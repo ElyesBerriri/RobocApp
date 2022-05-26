@@ -14,7 +14,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -33,7 +32,7 @@ public class AddTeam extends AppCompatActivity implements AdapterView.OnItemSele
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_team);
         //progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        resizeImage(R.drawable.lo);
+        resizeImage(R.drawable.logo_are);
         spinner = (Spinner) findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.spinner_array, android.R.layout.simple_spinner_item);

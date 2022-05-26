@@ -14,7 +14,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
         android:background="@drawable/circle"
-        android:src="@drawable/lo" />
+        android:src="@drawable/logo_are" />
 
     <LinearLayout
         android:id="@+id/head"
@@ -27,7 +27,7 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:background="@drawable/circle"
-            android:src="@drawable/robot" />
+            android:src="@drawable/robot_left" />
 
         <TextView
             android:id="@+id/signin"
@@ -44,7 +44,7 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:background="@drawable/circle"
-            android:src="@drawable/robot2" />
+            android:src="@drawable/robot_right" />
     </LinearLayout>
 
     <LinearLayout
@@ -182,7 +182,7 @@
             android:layout_height="70dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="70dp"
-            android:src="@drawable/robot5" />
+            android:src="@drawable/robot_contact_us" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -225,21 +225,21 @@
             android:layout_height="48dp"
             android:layout_margin="15dp"
             android:onClick="fbClick"
-            android:src="@drawable/fb2" />
+            android:src="@drawable/fb" />
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="15dp"
             android:onClick="instaClick"
-            android:src="@drawable/insta2" />
+            android:src="@drawable/insta" />
 
         <ImageView
             android:layout_width="55dp"
             android:layout_height="55dp"
             android:layout_margin="15dp"
             android:onClick="linkedinClick"
-            android:src="@drawable/lin" />
+            android:src="@drawable/linkedin" />
     </LinearLayout>
 
 </RelativeLayout>

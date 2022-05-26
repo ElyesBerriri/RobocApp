@@ -17,7 +17,7 @@ public class AdminActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin);
-        resizeImage(R.drawable.lo);
+        resizeImage(R.drawable.logo_are);
     }
 
     public void addUser(View view) {
