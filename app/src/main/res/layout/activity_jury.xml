@@ -16,7 +16,7 @@
             android:id="@+id/title_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/item2"
+            android:background="@drawable/corner3"
             android:padding="20dp"
             android:text="Jury"
             android:textAlignment="center"
@@ -45,7 +45,7 @@
             android:padding="2dp"
             android:textColor="@color/black"
             android:textSize="25sp"
-            android:background="@drawable/item2"/>
+            android:background="@drawable/corner3"/>
 
 
 

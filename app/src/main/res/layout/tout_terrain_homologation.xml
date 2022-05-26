@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey"
     tools:context=".homologation.ToutTerrainHomologation">
 
     <!-- TODO: Update blank fragment layout -->
@@ -24,7 +25,7 @@
             android:textColor="@color/white"
             android:padding="20dp"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/item5" />
+            android:background="@drawable/corner3" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -67,6 +68,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/one"
-        android:paddingHorizontal="30dp"
-        android:layout_marginVertical="10dp"/>
+        android:layout_marginVertical="10dp"
+        android:paddingHorizontal="30dp" />
 </RelativeLayout>

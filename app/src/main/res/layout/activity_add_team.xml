@@ -20,7 +20,7 @@
             android:padding="10dp"
             android:textAlignment="center"
             android:textSize="30sp"
-            android:background="@drawable/item4"
+            android:background="@drawable/corner2"
             android:textColor="@color/white" />
 
         <LinearLayout
@@ -67,7 +67,7 @@
                 android:layout_marginStart="10dp"
                 android:lines="2"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20sp"/>
         </LinearLayout>
 
         <LinearLayout

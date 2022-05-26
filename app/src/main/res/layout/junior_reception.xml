@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Concours Junior"
+            android:text="Concours\nJunior"
             android:textAlignment="center"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -23,7 +23,7 @@
             android:textColor="@color/white"
             android:padding="20dp"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/item5" />
+            android:background="@drawable/corner3" />
 
         <LinearLayout
             android:layout_width="wrap_content"
