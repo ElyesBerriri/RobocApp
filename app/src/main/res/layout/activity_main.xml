@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#DDD5C5"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/are_logo"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
         android:background="@drawable/circle"
@@ -35,19 +36,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:paddingHorizontal="30dp"
+            android:paddingHorizontal="15dp"
             android:text="Sign in"
-            android:textColor="@color/g"
-            android:textSize="35dp"
-            android:textStyle="bold" />
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"/>
 
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:background="@drawable/circle"
-            android:src="@drawable/robot_right"
-            android:padding="12dp"/>
-    </LinearLayout>
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/circle"
+                    android:src="@drawable/robot_right"
+                    android:padding="12dp"/>
+
+            </LinearLayout>
 
     <LinearLayout
         android:id="@+id/body"
@@ -55,131 +58,154 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/head"
         android:orientation="vertical"
-        android:paddingHorizontal="30dp"
-        android:paddingTop="50dp">
+        android:paddingTop="30dp">
 
         <EditText
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
             android:background="@drawable/corner2"
             android:drawableLeft="@drawable/ic_baseline_person_pin_24"
             android:drawablePadding="20dp"
             android:hint="Username"
-            android:inputType="textWebEmailAddress"
-            android:padding="10dp"
-            android:textColor="@color/g"
-            android:textColorHint="@color/g"
+            android:inputType="text"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="10dp"
+            android:textColorHint="@color/black"
             android:textSize="20sp" />
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/corner2"
             android:drawableLeft="@drawable/ic_baseline_security_24"
             android:drawablePadding="20dp"
             android:hint="Password"
             android:inputType="textPassword"
-            android:padding="10dp"
-            android:textColor="@color/g"
-            android:textColorHint="@color/g"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="10dp"
             android:textSize="20sp"
-            android:textStyle="normal" />
+            android:textColorHint="@color/black"/>
 
         <Button
             android:id="@+id/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="40dp"
-            android:text="LOGIN!"
+            android:layout_marginHorizontal="70dp"
+            android:layout_marginTop="22dp"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.3"
+            android:onClick="loginClick"
+            android:text="LOGIN"
             android:textColor="@color/white"
-            android:textColorHighlight="@color/darkYellow"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:onClick="loginClick"/>
-        <!--
-           <TextView
-               android:id="@+id/forgotpass"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_below="@id/loginbtn"
-               android:layout_centerHorizontal="true"
-               android:layout_marginStart="45dp"
-
-
-               android:layout_marginTop="15dp"
-               android:layout_marginEnd="45dp"
-               android:layout_marginBottom="45dp"
-
-               android:background="@drawable/item2"
-
-               android:text="FORGOT YOUR PASSWORD?"
-               android:textColor="@color/g"
-               android:textSize="15dp"
-               android:textStyle="bold" />
-
-          <TextView
-             android:id="@+id/registerlink"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_below="@id/loginbtn"
-             android:layout_centerHorizontal="true"
-             android:layout_marginStart="45dp"
-       android:gravity="center"
-             android:layout_marginTop="55dp"
-             android:layout_marginEnd="45dp"
-             android:layout_marginBottom="45dp"
-
-             android:background="@drawable/item2"
-
-             android:text="Don't have an account yet? "
-             android:textColor="@color/g"
-             android:textSize="15dp"
-             android:textStyle="bold" />
-
-        <TextView
-             android:id="@+id/signupage"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_below="@id/loginbtn"
-
-             android:layout_alignRight="@id/registerlink"
-
-             android:layout_marginTop="54dp"
-
-             android:layout_marginRight="-54dp"
-
-             android:layout_marginBottom="0dp"
-
-             android:background="@drawable/item2"
-             android:text="Sign up "
-             android:textColor="@color/g"
-             android:textSize="15dp"
-             android:textStyle="bold" />
-
-
-
-        <Switch
-            android:id="@+id/active"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/login"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:gravity="end"
-            android:text="Remember me"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
-            -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:fontFamily="monospace"
+            android:text="RoboCup ENSI 5.0"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:fontFamily="cursive"
+            android:text='" Robots for Humanity" '
+            android:textColor="#9C7605"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+        <!--
+                   <TextView
+                       android:id="@+id/forgotpass"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_below="@id/loginbtn"
+                       android:layout_centerHorizontal="true"
+                       android:layout_marginStart="45dp"
+
+
+                       android:layout_marginTop="15dp"
+                       android:layout_marginEnd="45dp"
+                       android:layout_marginBottom="45dp"
+
+                       android:background="@drawable/item2"
+
+                       android:text="FORGOT YOUR PASSWORD?"
+                       android:textColor="@color/g"
+                       android:textSize="15dp"
+                       android:textStyle="bold" />
+
+                  <TextView
+                     android:id="@+id/registerlink"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@id/loginbtn"
+                     android:layout_centerHorizontal="true"
+                     android:layout_marginStart="45dp"
+               android:gravity="center"
+                     android:layout_marginTop="55dp"
+                     android:layout_marginEnd="45dp"
+                     android:layout_marginBottom="45dp"
+
+                     android:background="@drawable/item2"
+
+                     android:text="Don't have an account yet? "
+                     android:textColor="@color/g"
+                     android:textSize="15dp"
+                     android:textStyle="bold" />
+
+                <TextView
+                     android:id="@+id/signupage"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@id/loginbtn"
+
+                     android:layout_alignRight="@id/registerlink"
+
+                     android:layout_marginTop="54dp"
+
+                     android:layout_marginRight="-54dp"
+
+                     android:layout_marginBottom="0dp"
+
+                     android:background="@drawable/item2"
+                     android:text="Sign up "
+                     android:textColor="@color/g"
+                     android:textSize="15dp"
+                     android:textStyle="bold" />
+
+
+
+                <Switch
+                    android:id="@+id/active"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/login"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="end"
+                    android:text="Remember me"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                    -->
 
     </LinearLayout>
-
+<!--
     <ImageView
         android:layout_width="65dp"
         android:layout_height="70dp"
@@ -187,15 +213,14 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
         android:src="@drawable/robot_contact_us" />
-
+-->
     <LinearLayout
         android:id="@+id/contact_us"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/foot"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="125dp"
@@ -211,44 +236,47 @@
             android:layout_gravity="center_vertical"
             android:text="Contact Us"
             android:textColor="@color/g"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"/>
 
         <ImageView
             android:layout_width="125dp"
             android:layout_height="20dp"
-            android:src="@drawable/line"
             android:scaleX="5"
-            android:scaleY="2"/>
+            android:scaleY="2"
+            android:src="@drawable/line" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/foot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/corner3"
         android:gravity="center"
-        android:id="@+id/foot">
-        <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_margin="15dp"
-            android:onClick="fbClick"
-            android:src="@drawable/fb" />
+        android:paddingTop="10dp"
+        android:paddingBottom="18dp">
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_margin="15dp"
-            android:onClick="instaClick"
-            android:src="@drawable/insta" />
+            android:layout_marginHorizontal="15dp"
+            android:onClick="fbClick"
+            android:src="@drawable/facebook" />
 
         <ImageView
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_margin="15dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="15dp"
+            android:onClick="instaClick"
+            android:src="@drawable/instagram" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="15dp"
             android:onClick="linkedinClick"
-            android:src="@drawable/linkedin" />
+            android:src="@drawable/linkedinn" />
     </LinearLayout>
 
 </RelativeLayout>

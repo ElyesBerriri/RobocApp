@@ -4,22 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#DDD5C5"
     tools:context=".AdminActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:orientation="vertical">
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:padding="10dp"
             android:background="@drawable/corner2"
+            android:fontFamily="monospace"
+            android:padding="10dp"
             android:text="ADMIN PAGE"
             android:textAlignment="center"
             android:textColor="@color/white"
@@ -33,21 +34,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="70dp"
-            android:paddingVertical="20dp"
+            android:layout_marginTop="50dp"
             android:onClick="addUser"
-            android:text="Ajouter Un Utilisateur"
-            android:textColor="@color/white"/>
+            android:paddingVertical="20dp"
+            android:text="Add user"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.3"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/addTeam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="40dp"
-            android:paddingVertical="20dp"
+            android:layout_marginTop="30dp"
             android:onClick="addTeam"
-            android:text="Ajouter Une Equipe"
+            android:paddingVertical="20dp"
+            android:text="Add team"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.3"
+            android:textStyle="bold"
             android:textColor="@color/white" />
 
         <Button
@@ -55,11 +62,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="40dp"
-            android:paddingVertical="20dp"
+            android:layout_marginTop="30dp"
             android:onClick="disconnect"
-            android:text="Se déconnecter"
+            android:paddingVertical="20dp"
+            android:text="Disconnect"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.3"
+            android:textStyle="bold"
             android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/circle"
+            android:src="@drawable/logo_are" />
 
     </LinearLayout>
 

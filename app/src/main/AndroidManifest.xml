@@ -6,9 +6,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/robot_contact_us"
+        android:icon="@drawable/logo_are"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/robot_contact_us"
+        android:roundIcon="@drawable/logo_are"
         android:supportsRtl="true"
         android:theme="@style/Theme.RobocApp">
         <activity

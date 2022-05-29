@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="wrap_content"
     app:cardElevation="8dp"
     app:cardCornerRadius="10dp"
     android:layout_margin="10dp">
@@ -13,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_margin="10dp"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="10dp"
         android:layout_gravity="center_vertical">
 
         <TextView
@@ -21,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold"/>
 
         <LinearLayout
@@ -34,7 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Score Homologation : "
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/list_score"
@@ -42,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:text="TextView"
-                android:textSize="20sp" />
+                android:textSize="17sp" />
 
         </LinearLayout>
 

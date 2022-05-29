@@ -4,22 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#DDD5C5"
     tools:context=".AddUser">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:background="@drawable/corner2"
             android:padding="10dp"
-            android:text="Ajouter un utilisateur"
+            android:text="ADD USER"
+            android:fontFamily="monospace"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="30sp"
@@ -98,11 +99,13 @@
             android:id="@+id/addTeam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
+            android:layout_marginHorizontal="70dp"
             android:layout_marginTop="50dp"
-            android:paddingVertical="20dp"
             android:onClick="addTeam"
-            android:text="Enregistrer"
+            android:text="Submit"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.3"
+            android:textStyle="bold"
             android:textColor="@color/white" />
 
     </LinearLayout>

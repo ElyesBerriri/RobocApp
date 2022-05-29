@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_tornado"
     tools:context=".homologation.ToutTerrainHomologation">
 
     <!-- TODO: Update blank fragment layout -->
@@ -16,15 +17,18 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Concours Tout Terrain"
+            android:layout_gravity="center_horizontal"
+            android:text="Tout Terrain"
             android:textAlignment="center"
             android:textSize="30sp"
             android:textStyle="bold"
             android:fontFamily="serif-monospace"
             android:textColor="@color/white"
-            android:padding="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp"
+            android:layout_marginHorizontal="40dp"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/corner3" />
+            android:background="@drawable/corner3"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -51,7 +55,7 @@
                 android:onClick="disconnect"
                 android:paddingHorizontal="12dp"
                 android:paddingVertical="5dp"
-                android:text="déconnection"
+                android:text="Disconnect"
                 android:textColor="@color/white"
                 android:textSize="13sp" />
 
