@@ -60,7 +60,7 @@ public class QRScannerJury extends AppCompatActivity implements ZXingScannerView
 
         String data = rawResult.getText().trim();
 
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("login");
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("teams");
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

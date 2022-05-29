@@ -43,38 +43,52 @@ public class AddTeam extends AppCompatActivity implements AdapterView.OnItemSele
 
     public void addTeam(View view) {
 
-        EditText  editText0 = (EditText) findViewById(R.id.teamid);
+        EditText  editText0 = findViewById(R.id.teamid);
         String teamid = editText0.getText().toString().trim();
 
-        EditText  editText1 = (EditText) findViewById(R.id.teamname);
+        EditText  editText1 = findViewById(R.id.teamname);
         String teamname = editText1.getText().toString().trim();
 
-        EditText editText2 = (EditText) findViewById(R.id.chef);
+        EditText editText2 = findViewById(R.id.chef);
         String chef = editText2.getText().toString().trim();
 
-        EditText editText4= (EditText) findViewById(R.id.numtel);
-        long numtel = Integer.parseInt(editText4.getText().toString().trim());
+        EditText editText4= findViewById(R.id.numtel);
+        long numtel;
+        if(editText4.getText().toString().trim().equals(""))
+            numtel = 0;
+        else
+            numtel = Integer.parseInt(editText4.getText().toString().trim());
 
         reference = FirebaseDatabase.getInstance().getReference("teams");
+        if(teamid.equals("")) {
+            Toast.makeText(AddTeam.this, "You have to enter the robot name", Toast.LENGTH_SHORT).show();
+        }
+        else if(teamname.equals("")) {
+            Toast.makeText(AddTeam.this, "You have to enter the team name", Toast.LENGTH_SHORT).show();
+        }
+        else if(chef.equals("")) {
+            Toast.makeText(AddTeam.this, "You have to enter the chef name", Toast.LENGTH_SHORT).show();
+        }
+        else if(numtel==0) {
+            Toast.makeText(AddTeam.this, "You have to enter the phone number", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            Team team = new Team(teamid,teamname,chef,spinner.getSelectedItem().toString(),numtel);
+            reference.child(teamid).setValue(team).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
 
-        Team team = new Team(teamid,teamname,chef,spinner.getSelectedItem().toString(),numtel);
-        System.out.println(team);
-
-        reference.child(teamid).setValue(team).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-
-                if (task.isSuccessful()){
-                    Toast.makeText(AddTeam.this,"User has been registered successfully!",Toast.LENGTH_LONG).show();
-                    //progressBar.setVisibility(View.GONE);
-                    //redirect to adminActivity
-                    startActivity(new Intent(AddTeam.this, AdminActivity.class));
-                }else{
-                    Toast.makeText(AddTeam.this,"Failed to register! Try again!",Toast.LENGTH_LONG).show();
-                    //progressBar.setVisibility(View.GONE);
+                    if (task.isSuccessful()){
+                        Toast.makeText(AddTeam.this,"Team has been registered successfully!",Toast.LENGTH_LONG).show();
+                        //progressBar.setVisibility(View.GONE);
+                        startActivity(new Intent(AddTeam.this, AdminActivity.class));
+                    }else{
+                        Toast.makeText(AddTeam.this,"Failed to register! Try again!",Toast.LENGTH_LONG).show();
+                        //progressBar.setVisibility(View.GONE);
+                    }
                 }
-            }
-        });
+            });
+        }
     }
 
     //===== spinner =====

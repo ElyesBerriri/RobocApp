@@ -39,32 +39,37 @@ public class AddUser extends AppCompatActivity implements AdapterView.OnItemSele
 
     public void addTeam(View view) {
 
-        EditText editText1 = (EditText) findViewById(R.id.EtNom);
+        EditText editText1 = findViewById(R.id.EtNom);
         String username = editText1.getText().toString().trim();
 
-        EditText editText2 = (EditText) findViewById(R.id.EtPass);
+        EditText editText2 = findViewById(R.id.EtPass);
         String password = editText2.getText().toString().trim();
 
         reference = FirebaseDatabase.getInstance().getReference("login");
+        if(username.equals("")) {
+            Toast.makeText(AddUser.this, "You didn't enter a username", Toast.LENGTH_SHORT).show();
+        }
+        else if(password.equals("")) {
+            Toast.makeText(AddUser.this, "You didn't enter a password", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            User user = new User(username, spinner.getSelectedItem().toString(), password);
+            reference.child(username).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
 
-        User user = new User(username, spinner.getSelectedItem().toString(), password);
-        System.out.println(user);
-
-        reference.child(username).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-
-                if (task.isSuccessful()){
-                    Toast.makeText(AddUser.this,"User has been registered successfully!",Toast.LENGTH_LONG).show();
-                    //progressBar.setVisibility(View.GONE);
-                    //redirect to adminActivity
-                    startActivity(new Intent(AddUser.this, AdminActivity.class));
-                }else{
-                    Toast.makeText(AddUser.this,"Failed to register! Try again!",Toast.LENGTH_LONG).show();
-                    //progressBar.setVisibility(View.GONE);
+                    if (task.isSuccessful()){
+                        Toast.makeText(AddUser.this,"User has been registered successfully!",Toast.LENGTH_LONG).show();
+                        //progressBar.setVisibility(View.GONE);
+                        //redirect to adminActivity
+                        startActivity(new Intent(AddUser.this, AdminActivity.class));
+                    }else{
+                        Toast.makeText(AddUser.this,"Failed to register! Try again!",Toast.LENGTH_LONG).show();
+                        //progressBar.setVisibility(View.GONE);
+                    }
                 }
-            }
-        });
+            });
+        }
     }
 //===== spinner =====
     @Override

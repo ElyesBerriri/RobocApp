@@ -6,7 +6,8 @@
     android:layout_height="wrap_content"
     app:cardElevation="8dp"
     app:cardCornerRadius="10dp"
-    android:layout_margin="10dp">
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="#D5FFFFFF">
 
     <TextView
         android:id="@+id/list_name_rec"

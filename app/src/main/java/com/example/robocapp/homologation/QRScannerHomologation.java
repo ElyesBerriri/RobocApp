@@ -66,7 +66,7 @@ public class QRScannerHomologation extends AppCompatActivity implements ZXingSca
 
         String data = rawResult.getText().trim();
 
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("login");
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("teams");
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

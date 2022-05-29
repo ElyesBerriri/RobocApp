@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -26,9 +28,9 @@ public class JuryActivity extends AppCompatActivity {
             score_task5 = 50, score_task6 = 60,
             score_task7 = 70, score_task8 = 80,
             score_task9 = 90;
-    EditText team_name,team_id;
+    TextView team_id;
     CheckBox cb1, cb2, cb3, cb4,cb5,cb6,cb7,cb8,cb9; //checkboxes
-    ImageButton btnReset, btnSubmit;
+    Button btnReset, btnSubmit;
     DatabaseReference teamsRef = FirebaseDatabase.getInstance().getReference().child("teams");
 
     @Override

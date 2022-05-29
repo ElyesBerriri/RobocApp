@@ -22,8 +22,9 @@
             android:textStyle="bold"
             android:fontFamily="serif-monospace"
             android:textColor="@color/white"
-            android:paddingVertical="20dp"
-            android:layout_marginHorizontal="50dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp"
+            android:layout_marginHorizontal="30dp"
             android:layout_marginBottom="30dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/corner3"/>

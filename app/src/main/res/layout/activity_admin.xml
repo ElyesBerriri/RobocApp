@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:onClick="addUser"
             android:paddingVertical="20dp"
             android:text="Add user"
@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:onClick="addTeam"
             android:paddingVertical="20dp"
             android:text="Add team"
@@ -62,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:onClick="disconnect"
             android:paddingVertical="20dp"
             android:text="Disconnect"
@@ -72,8 +72,8 @@
             android:textColor="@color/white" />
 
         <ImageView
-            android:layout_width="220dp"
-            android:layout_height="220dp"
+            android:layout_width="250sp"
+            android:layout_height="250sp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
             android:background="@drawable/circle"

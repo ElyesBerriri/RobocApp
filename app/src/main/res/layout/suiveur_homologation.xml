@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_earthquake"
+    android:background="@drawable/earthquake"
     tools:context=".homologation.SuiveurHomologation">
 
     <LinearLayout
@@ -22,8 +22,9 @@
             android:textStyle="bold"
             android:fontFamily="serif-monospace"
             android:textColor="@color/white"
-            android:paddingVertical="20dp"
-            android:layout_marginHorizontal="50dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp"
+            android:layout_marginHorizontal="30dp"
             android:layout_marginBottom="30dp"
             android:background="@drawable/corner3"/>
         <LinearLayout
