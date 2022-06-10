@@ -17,6 +17,7 @@ import com.example.robocapp.reception.SuiveurReception;
 import com.example.robocapp.reception.ToutTerrainReception;
 
 public class NavbarReception extends AppCompatActivity {
+
     NavbarReceptionBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -28,7 +28,6 @@ import me.dm7.barcodescanner.zxing.ZXingScannerView;
 public class QRScannerReception extends AppCompatActivity implements ZXingScannerView.ResultHandler {
 
     ZXingScannerView scannerView;
-    DatabaseReference teamsRef = FirebaseDatabase.getInstance().getReference().child("teams");
     public static final String DATA = "com.example.qrcodetest2.EXTRA_SCORE";
 
     @Override
@@ -56,8 +55,8 @@ public class QRScannerReception extends AppCompatActivity implements ZXingScanne
     @Override
     public void handleResult(Result rawResult) {
         String data = rawResult.getText().trim();
-
-        teamsRef.addValueEventListener(new ValueEventListener() {
+        DatabaseReference teamsRef = FirebaseDatabase.getInstance().getReference("teams");
+        teamsRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.child(data).exists()) {
@@ -67,7 +66,9 @@ public class QRScannerReception extends AppCompatActivity implements ZXingScanne
                     }).addOnFailureListener(er -> {
                         Toast.makeText(QRScannerReception.this, "" + er.getMessage(), Toast.LENGTH_SHORT).show();
                     });
-                    startActivity(new Intent(QRScannerReception.this, NavbarReception.class));
+                    Intent intent = new Intent(QRScannerReception.this, NavbarReception.class);
+                    startActivity(intent);
+                    onBackPressed();
                 }
                 else{
                     Toast.makeText(QRScannerReception.this, "There is no registred robot who has the name : "+data+" !!!", Toast.LENGTH_LONG).show();

@@ -1,6 +1,5 @@
 package com.example.robocapp.homologation;
 
-
 import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,7 +28,6 @@ import java.util.Objects;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
-
 public class QRScannerHomologation extends AppCompatActivity implements ZXingScannerView.ResultHandler {
 
     ZXingScannerView scannerView;
@@ -48,12 +46,10 @@ public class QRScannerHomologation extends AppCompatActivity implements ZXingSca
                     public void onPermissionGranted(PermissionGrantedResponse permissionGrantedResponse) {
                         scannerView.startCamera();
                     }
-
                     @Override
                     public void onPermissionDenied(PermissionDeniedResponse permissionDeniedResponse) {
 
                     }
-
                     @Override
                     public void onPermissionRationaleShouldBeShown(PermissionRequest permissionRequest, PermissionToken permissionToken) {
                         permissionToken.continuePermissionRequest();
@@ -63,9 +59,7 @@ public class QRScannerHomologation extends AppCompatActivity implements ZXingSca
 
     @Override
     public void handleResult(Result rawResult) {
-
         String data = rawResult.getText().trim();
-
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("teams");
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override

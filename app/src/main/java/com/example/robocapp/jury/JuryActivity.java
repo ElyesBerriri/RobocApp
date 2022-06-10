@@ -102,7 +102,7 @@ public class JuryActivity extends AppCompatActivity {
                         String ch = dataSnapshot.child("concours").getValue().toString();
                         teamsRef.child(id).child("score_jury").setValue(s).addOnSuccessListener(suc -> // set to add or update
                         {
-                            Toast.makeText(JuryActivity.this, "Le score de ** "+data+" ** est bien ajouté", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(JuryActivity.this, "The score of "+data+" ** is successfully set", Toast.LENGTH_SHORT).show();
                         }).addOnFailureListener(er -> {
                             Toast.makeText(JuryActivity.this, "" + er.getMessage(), Toast.LENGTH_SHORT).show();
                         });

@@ -16,6 +16,7 @@ public class NavbarHomologation extends AppCompatActivity {
     NavbarHomologationBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        System.out.println("//////////////////////////////////////////");
         super.onCreate(savedInstanceState);
         binding = NavbarHomologationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
