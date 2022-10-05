@@ -53,7 +53,7 @@ public class AddTeam extends AppCompatActivity implements AdapterView.OnItemSele
         String chef = editText2.getText().toString().trim();
 
         EditText editText4= findViewById(R.id.numtel);
-        long numtel;
+        int numtel;
         if(editText4.getText().toString().trim().equals(""))
             numtel = 0;
         else

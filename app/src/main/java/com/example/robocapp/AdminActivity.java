@@ -27,6 +27,10 @@ public class AdminActivity extends AppCompatActivity {
         startActivity(new Intent(this, AddTeam.class));
     }
 
+    public void editTeam(View view) {
+        startActivity(new Intent(this, QRScannerAdmin.class));
+    }
+
     public void disconnect(View view){
         startActivity(new Intent(this,MainActivity.class));
     }

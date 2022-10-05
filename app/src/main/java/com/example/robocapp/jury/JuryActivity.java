@@ -190,10 +190,9 @@ public class JuryActivity extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         //String ch = dataSnapshot.child("concours").getValue().toString();
                         teamsRef.child(id).child("time").setValue(finalT);
+                        teamsRef.child(id).child("eliminated").setValue(e);
                         if(e){
-                            teamsRef.child(id).child("eliminated").setValue(e);
                             teamsRef.child(id).child("cause").setValue(c);
-
                         }
                         Team team = dataSnapshot.getValue(Team.class);
                         int h = team.getScore_homologation();

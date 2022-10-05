@@ -52,6 +52,12 @@
         <activity
             android:name="com.example.robocapp.homologation.QRScannerHomologation"
             android:exported="false" />
+        <activity
+            android:name="com.example.robocapp.QRScannerAdmin"
+            android:exported="false" />
+        <activity
+            android:name="com.example.robocapp.EditTeam"
+            android:exported="false" />
     </application>
 
 </manifest>

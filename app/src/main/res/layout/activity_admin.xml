@@ -58,6 +58,20 @@
             android:textColor="@color/white" />
 
         <Button
+            android:id="@+id/editTeam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:onClick="editTeam"
+            android:paddingVertical="20dp"
+            android:text="Edit team"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.3"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+        <Button
             android:id="@+id/disconnect"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
