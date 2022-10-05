@@ -61,43 +61,24 @@
             android:layout_marginVertical="10dp">
 
             <CheckBox
+                android:id="@+id/checkBox0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="50dp"
+                android:text="Départ" />
+
+            <CheckBox
                 android:id="@+id/checkBox1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="100dp"
-                android:onClick="onCheckBoxClicked"
-                android:text="@string/checkbox1" />
-
-            <CheckBox
-                android:id="@+id/checkBox5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="onCheckBoxClicked"
-                android:text="@string/checkbox5" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:layout_marginVertical="10dp">
+                android:layout_marginEnd="50dp"
+                android:text="Zone 1" />
 
             <CheckBox
                 android:id="@+id/checkBox2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onCheckBoxClicked"
-                android:text="@string/checkbox2"
-                android:layout_marginEnd="100dp"/>
-
-            <CheckBox
-                android:id="@+id/checkBox6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="onCheckBoxClicked"
-                android:text="@string/checkbox6" />
+                android:text="Zone 2" />
 
         </LinearLayout>
 
@@ -112,16 +93,21 @@
                 android:id="@+id/checkBox3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onCheckBoxClicked"
-                android:text="@string/checkbox3"
-                android:layout_marginEnd="100dp"/>
+                android:layout_marginEnd="50dp"
+                android:text="Zone 3" />
 
             <CheckBox
-                android:id="@+id/checkBox7"
+                android:id="@+id/checkBox4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onCheckBoxClicked"
-                android:text="@string/checkbox7" />
+                android:layout_marginEnd="50dp"
+                android:text="Zone 4" />
+
+            <CheckBox
+                android:id="@+id/checkBox5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zone 5" />
 
         </LinearLayout>
 
@@ -133,26 +119,162 @@
             android:layout_marginVertical="10dp">
 
             <CheckBox
-                android:id="@+id/checkBox4"
+                android:id="@+id/checkBox6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onCheckBoxClicked"
-                android:text="@string/checkbox4"
-                android:layout_marginEnd="100dp"/>
+                android:layout_marginEnd="50dp"
+                android:text="Zone 6" />
+
+            <CheckBox
+                android:id="@+id/checkBox7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="50dp"
+                android:text="Zone 7" />
 
             <CheckBox
                 android:id="@+id/checkBox8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onCheckBoxClicked"
-                android:text="@string/checkbox8" />
+                android:text="Zone 8"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Zone 9 : "/>
+
+<!--
+            <CheckBox
+                android:id="@+id/checkBox91"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:onClick="onCheckBoxClicked"
+                android:text="Chemin 1" />-->
+
+            <RadioGroup
+                android:id="@+id/chemin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <RadioButton
+                    android:id="@+id/radio1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="5dp"
+                    android:text="Ch 1"/>
+                <RadioButton
+                    android:id="@+id/radio2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="5dp"
+                    android:text="Ch 2"/>
+
+                    <RadioButton
+                        android:id="@+id/radio3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="Ch 3"/>
+                    <RadioButton
+                        android:id="@+id/radio4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="Ch 4"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/secondRace"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_weight="5"
+                android:text="2éme Tour"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginVertical="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temps en secondes :"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/temps"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="@string/hint"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginVertical="5dp">
+
+            <CheckBox
+                android:id="@+id/eliminated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Éliminé"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/cause"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Cause d'élimination"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal">
 
@@ -174,6 +296,8 @@
                 android:textColor="@color/white" />
 
         </LinearLayout>
+
+
 
     </LinearLayout>
 

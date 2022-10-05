@@ -35,6 +35,7 @@ public class MyAdapterJury extends RecyclerView.Adapter<MyAdapterJury.MyViewHold
         Team model = mList.get(position);
         holder.name.setText(model.getTeam_id());
         holder.score.setText(model.getScore_jury()+"");
+        if(model.eliminated) holder.eliminated.setText("Éliminé");
     }
 
     @Override
@@ -42,11 +43,12 @@ public class MyAdapterJury extends RecyclerView.Adapter<MyAdapterJury.MyViewHold
         return mList.size();
     }
     public static class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView name,score;
+        TextView name,score,eliminated;
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
             name = itemView.findViewById(R.id.list_name_jury);
             score = itemView.findViewById(R.id.list_score_jury);
+            eliminated = itemView.findViewById(R.id.list_name_jury_eliminated);
         }
     }
 }

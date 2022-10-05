@@ -7,16 +7,17 @@ public class Team {
     public String concours;
     public boolean pres = false;
     public long num_tel;
-    public int score_jury = -1;
+    public float score_jury = -1;
     public int score_homologation = -1;
-    //public String freind_team;
-    //public boolean dej;
+    public float time = 0;
+    public boolean eliminated = false;
+    public String cause = "";
 
     public Team() {
 
     }
 
-    public Team(String team_id, String team_name, String team_chef, String concours, long num_tel, boolean pres, int score_jury, int score_homologation) {
+    public Team(String team_id, String team_name, String team_chef, String concours, long num_tel, boolean pres, float score_jury, int score_homologation, float t, boolean e, String c) {
         this.team_id = team_id;
         this.team_name = team_name;
         this.team_chef = team_chef;
@@ -25,6 +26,10 @@ public class Team {
         this.num_tel = num_tel;
         this.score_jury = score_jury;
         this.score_homologation = score_homologation;
+        this.time = t;
+        this.eliminated = e;
+        this.cause = c;
+
     }
 
     public Team(String team_id, String team_name, String team_chef, String concours, long num_tel) {
@@ -54,9 +59,10 @@ public class Team {
         return pres;
     }
 
-    public int getScore_jury() {
+    public float getScore_jury() {
         return score_jury;
     }
+
 
    // public int compareTo(Team compareteam) {
      //   int comparescore_jury = ((Team) compareteam).getScore_jury();

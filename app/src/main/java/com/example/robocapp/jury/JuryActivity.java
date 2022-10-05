@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,6 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.robocapp.R;
+import com.example.robocapp.Team;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -22,15 +25,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class JuryActivity extends AppCompatActivity {
-    private static final int
-            score_task1 = 10, score_task2 = 20,
-            score_task3 = 30, score_task4 = 40,
-            score_task5 = 50, score_task6 = 60,
-            score_task7 = 70, score_task8 = 80,
-            score_task9 = 90;
     TextView team_id;
-    CheckBox cb1, cb2, cb3, cb4,cb5,cb6,cb7,cb8,cb9; //checkboxes
-    Button btnReset, btnSubmit;
+    CheckBox cb0, cb1, cb2, cb3, cb4,cb5,cb6,cb7,cb8,eliminated; //checkboxes
+    EditText time,cause;
+    RadioButton rb1,rb2,rb3,rb4;
+    RadioGroup rg;
+    Button btnReset, btnSubmit, btnSecondRace;
     DatabaseReference teamsRef = FirebaseDatabase.getInstance().getReference().child("teams");
 
     @Override
@@ -55,57 +55,156 @@ public class JuryActivity extends AppCompatActivity {
         cb6 = findViewById(R.id.checkBox6);
         cb7 = findViewById(R.id.checkBox7);
         cb8 = findViewById(R.id.checkBox8);
-        //cb9 = findViewById(R.id.checkBox9);
+        cb0 = findViewById(R.id.checkBox0);
+        rb1 = findViewById(R.id.radio1);
+        rb2 = findViewById(R.id.radio2);
+        rb3 = findViewById(R.id.radio3);
+        rb4 = findViewById(R.id.radio4);
+        rg = findViewById(R.id.chemin);
 
+        eliminated = findViewById(R.id.eliminated);
+        time = findViewById(R.id.temps);
+        cause = findViewById(R.id.cause);
+
+        btnSecondRace = findViewById(R.id.secondRace);
         btnReset = findViewById(R.id.imageButton1);
         btnSubmit = findViewById(R.id.imageButton2);
 
-        btnSubmit.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-
-                String id = team_id.getText().toString();
-                int score_jury = 0;
-                if (cb1.isChecked()) {
-                    score_jury += score_task1;
-                }
-                if (cb2.isChecked()) {
-                    score_jury += score_task2;
-                }
-                if (cb3.isChecked()) {
-                    score_jury += score_task3;
-                }
-                if (cb4.isChecked()) {
-                    score_jury += score_task4;
-                }
-                if (cb5.isChecked()) {
-                    score_jury += score_task5;
-                }
-                if (cb6.isChecked()) {
-                    score_jury += score_task6;
-                }
-                if (cb7.isChecked()) {
-                    score_jury += score_task7;
-                }
-                if (cb8.isChecked()) {
-                    score_jury += score_task8;
-                }
-
-                System.out.println("score jury =" + score_jury);
-                System.out.println("team id =" + team_id.getText().toString());
-                int s = score_jury;
-
-                teamsRef.child(id).addValueEventListener(new ValueEventListener() {
+        final float[] score_jury = {0};
+        final boolean[] secondRace = {false};
+        btnSecondRace.setOnClickListener(new View.OnClickListener() {
+                                             @Override
+                                             public void onClick(View view) {
+                                                 String id = team_id.getText().toString();
+                                                 secondRace[0] = true;
+                                                 if (cb0.isChecked()) {
+                                                     score_jury[0] += 20;
+                                                     cb0.setChecked(false);
+                                                 }
+                                                 if (cb1.isChecked()) {
+                                                     score_jury[0] += 30;
+                                                     cb1.setChecked(false);
+                                                 }
+                                                 if (cb2.isChecked()) {
+                                                     score_jury[0] += 40;
+                                                     cb2.setChecked(false);
+                                                 }
+                                                 if (cb3.isChecked()) {
+                                                     score_jury[0] += 50;
+                                                     cb3.setChecked(false);
+                                                 }
+                                                 if (cb4.isChecked()) {
+                                                     score_jury[0] += 10;
+                                                     cb4.setChecked(false);
+                                                 }
+                                                 if (cb5.isChecked()) {
+                                                     score_jury[0] += 40;
+                                                     cb5.setChecked(false);
+                                                 }
+                                                 if (cb6.isChecked()) {
+                                                     score_jury[0] += 50;
+                                                     cb6.setChecked(false);
+                                                 }
+                                                 if (cb7.isChecked()) {
+                                                     score_jury[0] += 30;
+                                                     cb7.setChecked(false);
+                                                 }
+                                                 if (cb8.isChecked()) {
+                                                     score_jury[0] += 70;
+                                                     cb8.setChecked(false);
+                                                 }
+                                                 if (rb1.isChecked()) {
+                                                     score_jury[0] += 20;
+                                                 }
+                                                 if (rb2.isChecked()) {
+                                                     score_jury[0] += 40;
+                                                 }
+                                                 if (rb3.isChecked()) {
+                                                     score_jury[0] += 60;
+                                                 }
+                                                 if (rb4.isChecked()) {
+                                                     score_jury[0] += 80;
+                                                 }
+                                                 rg.clearCheck();
+                                             }
+                                         });
+             btnSubmit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    String id = team_id.getText().toString();
+                    if (cb0.isChecked()) {
+                        score_jury[0] += 20;
+                    }
+                    if (cb1.isChecked()) {
+                        score_jury[0] += 30;
+                    }
+                    if (cb2.isChecked()) {
+                        score_jury[0] += 40;
+                    }
+                    if (cb3.isChecked()) {
+                        score_jury[0] += 50;
+                    }
+                    if (cb4.isChecked()) {
+                        score_jury[0] += 10;
+                    }
+                    if (cb5.isChecked()) {
+                        score_jury[0] += 40;
+                    }
+                    if (cb6.isChecked()) {
+                        score_jury[0] += 50;
+                    }
+                    if (cb7.isChecked()) {
+                        score_jury[0] += 30;
+                    }
+                    if (cb8.isChecked()) {
+                        score_jury[0] += 70;
+                    }
+                    if (rb1.isChecked()) {
+                        score_jury[0] += 20;
+                    }
+                    if (rb2.isChecked()) {
+                        score_jury[0] += 40;
+                    }
+                    if (rb3.isChecked()) {
+                        score_jury[0] += 60;
+                    }
+                    if (rb4.isChecked()) {
+                        score_jury[0] += 80;
+                    }
+                    float t;
+                    if (time.getText().toString().equals(""))
+                        t=0;
+                    else
+                        t = Float.parseFloat(time.getText().toString());
+                    if(secondRace[0]){
+                        t= (float) ((480-t)*0.3);
+                    } else {
+                        t= (float) ((240-t)*0.3);
+                    }
+                    if(t<0) t=0;
+                    boolean e = eliminated.isChecked();
+                    String c = cause.getText().toString();
+                    float finalT = t;
+                    teamsRef.child(id).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        String ch = dataSnapshot.child("concours").getValue().toString();
-                        teamsRef.child(id).child("score_jury").setValue(s).addOnSuccessListener(suc -> // set to add or update
+                        //String ch = dataSnapshot.child("concours").getValue().toString();
+                        teamsRef.child(id).child("time").setValue(finalT);
+                        if(e){
+                            teamsRef.child(id).child("eliminated").setValue(e);
+                            teamsRef.child(id).child("cause").setValue(c);
+
+                        }
+                        Team team = dataSnapshot.getValue(Team.class);
+                        int h = team.getScore_homologation();
+                        float r = (float)score_jury[0]+h+finalT;
+                        teamsRef.child(id).child("score_jury").setValue(r).addOnSuccessListener(suc -> // set to add or update
                         {
-                            Toast.makeText(JuryActivity.this, "The score of "+data+" ** is successfully set", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(JuryActivity.this, "The score of "+data+"  is successfully set", Toast.LENGTH_SHORT).show();
                         }).addOnFailureListener(er -> {
                             Toast.makeText(JuryActivity.this, "" + er.getMessage(), Toast.LENGTH_SHORT).show();
                         });
+
                         // 2nd method : (without using a map)
                         //teamsRef.child(team_id.getText().toString()).setValueAsync(new team(team_name.getText().toString(),score_jury));
                         Intent intent = new Intent(JuryActivity.this, NavbarJury.class);
@@ -123,6 +222,8 @@ public class JuryActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                if (cb0.isChecked())
+                    cb0.setChecked(false);
                 if (cb1.isChecked())
                     cb1.setChecked(false);
                 if (cb2.isChecked())
@@ -139,10 +240,14 @@ public class JuryActivity extends AppCompatActivity {
                     cb7.setChecked(false);
                 if (cb8.isChecked())
                     cb8.setChecked(false);
+                rg.clearCheck();
             }
         });
     } // onCreate() ends.
 
+
+
+    /*
     public void onCheckBoxClicked(View view) {
         boolean checked = ((CheckBox) view).isChecked();
         switch (view.getId()) {
@@ -195,5 +300,5 @@ public class JuryActivity extends AppCompatActivity {
                     Log.d("CheckBox8", "Unchecked");
                 break;
         }
-    }
+    }*/
 }

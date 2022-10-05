@@ -19,4 +19,5 @@
     <color name="t">#6BA39154</color>
     //============
     <color name="grey">#DDDADA</color>
+    <color name="red">#FF0000</color>
 </resources>
