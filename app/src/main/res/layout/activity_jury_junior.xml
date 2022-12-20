@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".jury.JuryActivity">
+    tools:context=".jury.JuryJuniorActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Jury"
+            android:text="Junior"
             android:textAlignment="center"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -60,54 +60,59 @@
             android:orientation="horizontal"
             android:layout_marginVertical="10dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Secteur A :"
+                android:layout_marginEnd="10dp"/>
+
             <CheckBox
                 android:id="@+id/checkBox0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="50dp"
-                android:text="Départ" />
+                android:text="Dos d'âne" />
 
             <CheckBox
                 android:id="@+id/checkBox1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="50dp"
-                android:text="Zone 1" />
+                android:text="Couloir" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginVertical="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Couloir :"
+                android:layout_marginEnd="10dp"/>
 
             <CheckBox
                 android:id="@+id/checkBox2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Zone 2" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:layout_marginVertical="10dp">
+                android:layout_marginEnd="30dp"
+                android:text="1er" />
 
             <CheckBox
                 android:id="@+id/checkBox3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="50dp"
-                android:text="Zone 3" />
+                android:layout_marginEnd="30dp"
+                android:text="2éme" />
 
             <CheckBox
                 android:id="@+id/checkBox4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="50dp"
-                android:text="Zone 4" />
-
-            <CheckBox
-                android:id="@+id/checkBox5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Zone 5" />
+                android:text="Secteur B" />
 
         </LinearLayout>
 
@@ -118,103 +123,51 @@
             android:orientation="horizontal"
             android:layout_marginVertical="10dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Secteur B :"
+                android:layout_marginEnd="10dp"/>
+
+            <CheckBox
+                android:id="@+id/checkBox5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="50dp"
+                android:text="Levier" />
+
             <CheckBox
                 android:id="@+id/checkBox6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="50dp"
-                android:text="Zone 6" />
+                android:text="Secteur C" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Secteur C :"
+                android:layout_marginEnd="10dp"/>
 
             <CheckBox
                 android:id="@+id/checkBox7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="50dp"
-                android:text="Zone 7" />
+                android:text="Cylindre" />
 
             <CheckBox
                 android:id="@+id/checkBox8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Zone 8"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="Zone 9 : "/>
-
-<!--
-            <CheckBox
-                android:id="@+id/checkBox91"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:onClick="onCheckBoxClicked"
-                android:text="Chemin 1" />-->
-
-            <RadioGroup
-                android:id="@+id/chemin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:orientation="horizontal"
-                >
-
-                <RadioButton
-                    android:id="@+id/radio1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginHorizontal="5dp"
-                    android:text="Ch 1"/>
-                <RadioButton
-                    android:id="@+id/radio2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginHorizontal="5dp"
-                    android:text="Ch 2"/>
-
-                    <RadioButton
-                        android:id="@+id/radio3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginHorizontal="5dp"
-                        android:text="Ch 3"/>
-                    <RadioButton
-                        android:id="@+id/radio4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginHorizontal="5dp"
-                        android:text="Ch 4"/>
-            </RadioGroup>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal">
-
-            <Button
-                android:id="@+id/secondRace"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:layout_weight="5"
-                android:text="2éme Tour"
-                android:textColor="@color/white"/>
+                android:text="Bouton"/>
 
         </LinearLayout>
 
@@ -280,8 +233,8 @@
 
             <Button
                 android:id="@+id/imageButton1"
-                android:layout_width="90dp"
-                android:layout_height="60dp"
+                android:layout_width="80dp"
+                android:layout_height="45dp"
                 android:layout_weight="5"
                 android:text="reset"
                 android:textColor="@color/white"
@@ -289,18 +242,12 @@
 
             <Button
                 android:id="@+id/imageButton2"
-                android:layout_width="90dp"
+                android:layout_width="110dp"
                 android:layout_height="60dp"
                 android:layout_weight="5"
                 android:text="submit"
                 android:textColor="@color/white" />
 
         </LinearLayout>
-
-
-
     </LinearLayout>
-
-
-
 </LinearLayout>

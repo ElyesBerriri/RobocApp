@@ -27,7 +27,16 @@
             android:name="com.example.robocapp.AddUser"
             android:exported="false" />
         <activity
-            android:name="com.example.robocapp.jury.JuryActivity"
+            android:name="com.example.robocapp.jury.JurySuiveurActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.robocapp.jury.JuryAutonomeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.robocapp.jury.JuryToutTerrainActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.robocapp.jury.JuryJuniorActivity"
             android:exported="false" />
         <activity
             android:name="com.example.robocapp.reception.NavbarReception"
@@ -47,10 +56,16 @@
             android:name="com.example.robocapp.homologation.NavbarHomologation"
             android:exported="false" />
         <activity
-            android:name="com.example.robocapp.homologation.InputActivity"
+            android:name="com.example.robocapp.homologation.InputJandTTActivity"
             android:exported="false" />
         <activity
             android:name="com.example.robocapp.homologation.QRScannerHomologation"
+            android:exported="false" />
+        <activity
+            android:name="com.example.robocapp.homologation.InputSActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.robocapp.homologation.InputAActivity"
             android:exported="false" />
         <activity
             android:name="com.example.robocapp.QRScannerAdmin"

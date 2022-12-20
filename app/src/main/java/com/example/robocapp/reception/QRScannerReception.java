@@ -8,9 +8,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.robocapp.homologation.InputActivity;
-import com.example.robocapp.homologation.NavbarHomologation;
-import com.example.robocapp.homologation.QRScannerHomologation;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

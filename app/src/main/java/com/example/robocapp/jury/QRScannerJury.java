@@ -8,10 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.example.robocapp.homologation.InputActivity;
-import com.example.robocapp.homologation.NavbarHomologation;
-import com.example.robocapp.homologation.QRScannerHomologation;
-import com.example.robocapp.jury.JuryActivity;
+import com.example.robocapp.Team;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -65,17 +62,40 @@ public class QRScannerJury extends AppCompatActivity implements ZXingScannerView
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.child(data).exists()) {
-                    Intent intent = new Intent(QRScannerJury.this, JuryActivity.class);
-                    intent.putExtra(DATA, data);
-                    startActivity(intent);
-                    onBackPressed();
+                    Team team = dataSnapshot.child(data).getValue(Team.class);
+                    switch (team.concours) {
+                        case "suiveur": {
+                            Intent intent = new Intent(QRScannerJury.this, JurySuiveurActivity.class);
+                            intent.putExtra(DATA, data);
+                            startActivity(intent);
+                            break;
+                        }
+                        case "autonome": {
+                            Intent intent = new Intent(QRScannerJury.this, JuryAutonomeActivity.class);
+                            intent.putExtra(DATA, data);
+                            startActivity(intent);
+                            break;
+                        }
+                        case "junior": {
+                            Intent intent = new Intent(QRScannerJury.this, JuryJuniorActivity.class);
+                            intent.putExtra(DATA, data);
+                            startActivity(intent);
+                            break;
+                        }
+                        case "toutterrain": {
+                            Intent intent = new Intent(QRScannerJury.this, JuryToutTerrainActivity.class);
+                            intent.putExtra(DATA, data);
+                            startActivity(intent);
+                            break;
+                        }
+                    }
                 }
                 else{
                     Toast.makeText(QRScannerJury.this, "There is no registred robot who has the name : "+data+" !!!", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(QRScannerJury.this, NavbarJury.class);
                     startActivity(intent);
-                    onBackPressed();
                 }
+                onBackPressed();
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

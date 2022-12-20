@@ -13,9 +13,9 @@
     <string name="liste">Les robots homologués :</string>
     <string name="scan">Scan QR code</string>
     <string name="text_respect">Respect des dimensions \n de la cahier de charge :</string>
-    <string name="design">Note sur le design (10 pts) :</string>
-    <string name="meca">Note sur la conception\nmécanique (5 pts) :</string>
-    <string name="elec">Note sur la conception\nélectrique (5 pts) :</string>
+    <string name="design">Note sur le design (20 pts) :</string>
+    <string name="meca">Note sur la conception\nmécanique (15 pts) :</string>
+    <string name="elec">Note sur la conception\nélectrique (15 pts) :</string>
     <string name="hint">0</string>
     <string name="totale">Note totale (score) :</string>
     <string name="text_score">SCORE</string>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#DDD5C5"
-    tools:context=".homologation.InputActivity">
+    tools:context=".homologation.InputJandTTActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

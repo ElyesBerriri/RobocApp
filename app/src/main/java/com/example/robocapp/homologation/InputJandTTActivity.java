@@ -15,7 +15,7 @@ import com.example.robocapp.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class InputActivity extends AppCompatActivity {
+public class InputJandTTActivity extends AppCompatActivity {
 
     DatabaseReference db;
     //String maquette = "";
@@ -23,7 +23,7 @@ public class InputActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_input);
+        setContentView(R.layout.activity_input_jandtt);
 
         Intent intent = getIntent();
         String data = intent.getStringExtra(QRScannerHomologation.DATA);
@@ -33,39 +33,18 @@ public class InputActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(((TextView)findViewById(R.id.score)).getText().toString().equals("SCORE")){
-                    Toast.makeText(InputActivity.this, "Tu dois appuier sur le bouton 'OBTENIR LE SCORE' ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(InputJandTTActivity.this, "Tu dois appuier sur le bouton 'OBTENIR LE SCORE' ", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     int s = Integer.parseInt(((TextView)findViewById(R.id.score)).getText().toString());
                     db = FirebaseDatabase.getInstance().getReference("teams").child(data);
                     db.child("score_homologation").setValue(s).addOnSuccessListener(suc-> // set to add or update
                     {
-                        Toast.makeText(InputActivity.this, "Le score de ** "+data+" ** est bien ajouté", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(InputJandTTActivity.this, "Le score de ** "+data+" ** est bien ajouté", Toast.LENGTH_SHORT).show();
                     }).addOnFailureListener(er-> {
-                        Toast.makeText(InputActivity.this, ""+er.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(InputJandTTActivity.this, ""+er.getMessage(), Toast.LENGTH_SHORT).show();
                     });
-                    startActivity(new Intent(InputActivity.this, NavbarHomologation.class));
-/*
-                    db.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            maquette = dataSnapshot.child("concours").getValue().toString();
-                            if (maquette.equals("junior")) {
-                                startActivity(new Intent(InputActivity.this, juniorhomo.class));
-                            } else if (maquette.equals("autonome")) {
-                                startActivity(new Intent(InputActivity.this, autonomehomo.class));
-                            } else if (maquette.equals("suiveur")) {
-                                startActivity(new Intent(InputActivity.this, suiveurhomo.class));
-                            } else if (maquette.equals("toutterrain")) {
-                                startActivity(new Intent(InputActivity.this, tterrainhomo.class));
-                            }
-                        }
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {}
-
-                    });
-
- */
+                    startActivity(new Intent(InputJandTTActivity.this, NavbarHomologation.class));
                 }
             }
         });
